@@ -10,6 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style-plus.css">
 </head>
 <body>
   <header class="topbar">
@@ -21,6 +22,8 @@
   <main>
     <section class="hero" id="home">
       <div class="hero-image" aria-hidden="true"></div>
+      <div class="hero-grain" aria-hidden="true"></div>
+      <div class="hero-coordinate" aria-hidden="true"><span>12° 34′ N</span><i></i><span>OPEN WATER</span></div>
       <div class="hero-content">
         <div class="eyebrow"><span class="live-dot"></span> A SAFER SEA STARTS WITH YOU</div>
         <h1>Know the water.<br><em>Protect the blue.</em></h1>
@@ -30,11 +33,12 @@
       </div>
       <div class="hero-side-label">01 / THE BLUE PLANET</div>
       <div class="hero-bottom"><div><strong>71%</strong><span>of Earth is covered by ocean</span></div><div class="hero-bottom-rule"></div><div><strong>ONE</strong><span>ocean. Shared responsibility.</span></div></div>
+      <a class="hero-scroll" href="#safety" aria-label="Scroll to sea safety"><span class="scroll-orbit"><i></i></span><span>DESCEND INTO THE BLUE</span></a>
       <div class="scroll-cue"><span></span> SCROLL TO EXPLORE</div>
     </section>
 
     <section class="intro section-pad" id="safety">
-      <div class="section-kicker"><span>01</span><span class="kicker-rule"></span><span>RESPECT THE WATER</span></div>
+        <div class="section-kicker reveal"><span>01</span><span class="kicker-rule"></span><span>RESPECT THE WATER</span></div>
       <div class="intro-grid"><div><h2>The sea is beautiful.<br><span>And it deserves respect.</span></h2></div><div class="intro-text"><p>Whether you’re swimming, boating, or simply exploring the shore, the ocean can change quickly. A few simple habits help keep every visit a good one.</p><a href="#safety-cards" class="under-link">A few things to remember <span>↓</span></a></div></div>
       <div class="safety-grid" id="safety-cards">
         <article class="safety-card"><span class="card-index">01 / BEFORE YOU GO</span><div class="card-icon"><svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="9"/><path d="M24 4v6m0 28v6M4 24h6m28 0h6M10 10l4 4m20 20 4 4m0-28-4 4M14 34l-4 4"/></svg></div><h3>Check conditions</h3><p>Look up local weather, tides, and surf conditions. If the forecast turns, make a plan to head in.</p><span class="card-arrow">↗</span></article>
@@ -74,7 +78,7 @@
       </div>
     </section>
 
-    <section class="ocean-facts section-pad"><div class="section-kicker"><span>03</span><span class="kicker-rule"></span><span>SMALL ACTIONS, BIG RIPPLE</span></div><div class="facts-row"><div><span class="fact-number">01</span><h3>Leave it better</h3><p>Take your rubbish with you and pick up only what you can handle safely.</p></div><div><span class="fact-number">02</span><h3>Keep wildlife wild</h3><p>Give marine life plenty of space. Observe from a respectful distance.</p></div><div><span class="fact-number">03</span><h3>Share what you learn</h3><p>Help friends recognize hazards and keep the coastline clean.</p></div></div></section>
+    <section class="ocean-facts section-pad"><div class="section-kicker"><span>03</span><span class="kicker-rule"></span><span>SMALL ACTIONS, BIG RIPPLE</span></div><div class="facts-row"><div><span class="fact-number">01</span><h3>Leave it better</h3><p>Take your rubbish with you and pick up only what you can handle safely.</p></div><div><span class="fact-number">02</span><h3>Keep wildlife wild</h3><p>Give marine life plenty of space. Observe from a respectful distance.</p></div><div><span class="fact-number">03</span><h3>Share what you learn</h3><p>Help friends recognize hazards and keep the coastline clean.</p></div></div><div class="ocean-mantra"><span class="mantra-wave">〰</span><span>THE TIDE CONNECTS US ALL</span><span class="mantra-wave">〰</span></div></section>
     <section class="closing" id="action"><div class="closing-image"></div><div class="closing-content"><span class="closing-kicker">THE OCEAN IS OURS TO CARE FOR</span><h2>Better choices.<br><em>Bluer futures.</em></h2><p>Go gently. Stay aware. Leave the shore a little better than you found it.</p><a class="button button-lime" href="#home">Back to the surface <span>↑</span></a></div><span class="closing-coordinate">20° N · 38° W<br>OPEN WATER</span></section>
   </main>
   <footer><a class="brand footer-brand" href="#home"><span class="brand-mark"><svg viewBox="0 0 32 32"><path d="M16 3C12 9 7 14 7 20a9 9 0 0 0 18 0c0-6-5-11-9-17Z"/><path d="M11 21c.5 2.1 2 3.2 4 3.6"/></svg></span><span>AQUA<span class="brand-light">GUARD</span></span></a><span>AN OCEAN SAFETY & AWARENESS PROJECT</span><a href="#scanner">Try AquaGuard Vision ↑</a><span>© 2026 AQUAGUARD</span></footer>

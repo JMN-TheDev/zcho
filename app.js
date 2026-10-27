@@ -110,4 +110,30 @@
     stream?.getTracks().forEach((track) => track.stop()); stream = null; video.srcObject = null;
     cameraArea.hidden = true; $('camera-button').innerHTML = '<span>◎</span> Use camera';
   });
+
+  // Gentle motion adds depth while keeping the page comfortable to browse.
+  const header = document.querySelector('.topbar');
+  const syncHeader = () => header?.classList.toggle('scrolled', window.scrollY > 32);
+  syncHeader();
+  window.addEventListener('scroll', syncHeader, { passive: true });
+
+  const revealTargets = document.querySelectorAll(
+    '.intro-grid, .safety-card, .scanner-heading, .scanner-layout, .facts-row > div, .ocean-mantra, .closing-content'
+  );
+  if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      });
+    }, { threshold: 0.14, rootMargin: '0px 0px -30px 0px' });
+    revealTargets.forEach((element, index) => {
+      element.classList.add('reveal');
+      if (element.classList.contains('safety-card') || element.parentElement?.classList.contains('facts-row')) {
+        element.style.transitionDelay = `${(index % 4) * 75}ms`;
+      }
+      revealObserver.observe(element);
+    });
+  }
 })();
